@@ -10,7 +10,8 @@ public class Main {
         //emailService.filterDomain("@outlook");
         //emailService.verificarEmail();
         //emailService.cantidadDeEmail();
-        emailService.cantidadDeCorreosPorDominio("@gmail");
+        //emailService.emailsForDomain("@gmail");
+        emailService.emailsSending();
 
     }
 }

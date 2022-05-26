@@ -2,7 +2,6 @@ package ejercioUno.service;
 
 import ejercioUno.model.Email;
 import reactor.core.publisher.Flux;
-import reactor.core.publisher.Mono;
 
 import java.util.List;
 import java.util.Locale;
@@ -46,9 +45,16 @@ public class EmailService {
 
     //Saber la cantidad de correos gmail, hotmail y outlook sin usar un ciclo
 
-    public void cantidadDeCorreosPorDominio( String dominio){
+    public void emailsForDomain(String dominio){
         String dominioListo = dominio.toLowerCase(Locale.ROOT);
-        Flux.fromIterable(createdEmail.emails()).filter(x -> x.getEmail().contains(dominioListo)).count()
+        Flux.fromIterable(createdEmail.emails()).filter(email -> email.getEmail().contains(dominioListo)).count()
                 .subscribe(System.out::println);
     }
+
+    //En la misma lista determinar si se envió un correo o no a cada uno de los correos
+    public void emailsSending(){
+        Flux.fromIterable(createdEmail.emails()).filter(x -> x.getState() == true).count()
+                .subscribe(System.out::println);
+    }
+
 }

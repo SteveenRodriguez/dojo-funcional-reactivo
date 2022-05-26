@@ -13,7 +13,7 @@ public class CreatedEmail {
     public List<Email> emails () {
 
         List <Email> emails = new ArrayList<Email>();
-        emails.add((new Email("steveen@gmail.com")));
+        emails.add((new Email("steveen@gmail.com", true)));
         emails.add((new Email("steveen@gmail.com")));
         emails.add((new Email("steveen@gmail.com")));
         emails.add((new Email("steveen@gmail.com")));
