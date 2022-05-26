@@ -5,6 +5,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 import java.util.List;
+import java.util.Locale;
 
 public class EmailService {
 
@@ -43,8 +44,11 @@ public class EmailService {
         Flux.fromIterable(createdEmail.emails()).count().subscribe(System.out::println);
     }
 
+    //Saber la cantidad de correos gmail, hotmail y outlook sin usar un ciclo
 
-
-
-
+    public void cantidadDeCorreosPorDominio( String dominio){
+        String dominioListo = dominio.toLowerCase(Locale.ROOT);
+        Flux.fromIterable(createdEmail.emails()).filter(x -> x.getEmail().contains(dominioListo)).count()
+                .subscribe(System.out::println);
+    }
 }
