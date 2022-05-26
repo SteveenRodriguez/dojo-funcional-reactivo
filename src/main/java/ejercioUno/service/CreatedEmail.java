@@ -9,10 +9,12 @@ import java.util.List;
  * Distinct: para ver si hay correo repetidos, si hay correos repetidos eliminarlos
  */
 public class CreatedEmail {
-    public <Email> emails () {
+
+    public List<Email> emails () {
 
         List <Email> emails = new ArrayList<Email>();
-
+        emails.add((new Email("steveen@gmail.com")));
+        emails.add((new Email("steveen@gmail.com")));
         emails.add((new Email("steveen@gmail.com")));
         emails.add(new Email("jose@gmail.com"));
         emails.add(new Email("pabloS@gmail.com"));

@@ -21,11 +21,18 @@ public class Email {
     private String email;
     private Boolean state;
 
+    @Override
+    public String toString() {
+        return "Email{" +
+                "email='" + email + '\'' +
+                ", state=" + state +
+                '}';
+    }
 
     public Email(String email) {
         this.email = email;
+        this.state = false;
     }
-
 
     public Email(String email, Boolean state) {
         this.email = email;
