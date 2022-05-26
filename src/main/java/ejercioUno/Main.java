@@ -8,6 +8,8 @@ public class Main {
         EmailService emailService = new EmailService();
         //emailService.distinc();
         //emailService.filterDomain("@outlook");
+        //emailService.verificarEmail();
+        emailService.cantidadDeEmail();
 
     }
 }

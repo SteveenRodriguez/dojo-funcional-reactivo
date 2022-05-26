@@ -16,6 +16,8 @@ public class CreatedEmail {
         emails.add((new Email("steveen@gmail.com")));
         emails.add((new Email("steveen@gmail.com")));
         emails.add((new Email("steveen@gmail.com")));
+        emails.add((new Email("steveen@gmail.com")));
+        emails.add((new Email("steveen@gmail.com")));
         emails.add(new Email("jose@gmail.com"));
         emails.add(new Email("pabloS@gmail.com"));
         emails.add(new Email("hernan23T@gmail.com"));
