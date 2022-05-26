@@ -13,12 +13,13 @@ public class FilterBadWord{
             "pirobo", "hijueputa", "monda","zunga", "verga", "malparida", "Huevón", "bobo", "Imbécil"  );
 
 
-    public Mono<String> correctingWords(String phrase){
+    public void correctingWords(String phrase){
         List<String> words = List.of(phrase.split(" "));
 
-        Mono<String> mono = Flux.fromIterable(words)
-                .map(word -> (badWord.contains(word)) ? "***" : word)
-                .collect(joining(" "));
-        return mono;
+        Flux.fromIterable(words)
+                .map(word -> (badWord.contains(word)) ? "*****" : word)
+                .collect(joining(" "))
+                .subscribe(System.out::println);
+
     }
 }

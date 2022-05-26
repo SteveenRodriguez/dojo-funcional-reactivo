@@ -5,7 +5,7 @@ public class Main {
 
         String frase = "Hola, pero que idiota";
         FilterBadWord frases = new FilterBadWord();
-        frases.correctingWords(frase).subscribe(x -> System.out.println(x));
+        frases.correctingWords(frase);
 
     }
 }
