@@ -1,4 +1,5 @@
-# dojo-funcional-reactivo
+# Actividad final de mentorías 
+#### Dojo-funcional-reactivo
 ## Equipo 1
 - Adryan Ynfante
 - Andrea Lorena Castro
