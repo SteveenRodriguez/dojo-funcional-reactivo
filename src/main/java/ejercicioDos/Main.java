@@ -1,5 +1,6 @@
 package ejercicioDos;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
@@ -7,7 +8,7 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
         System.out.println("Digite una frase con cochinadas");
-        String frase = sc.nextLine();
+        String frase = sc.nextLine().toUpperCase(Locale.ROOT);
         FilterBadWord frases = new FilterBadWord();
         frases.correctingWords(frase);
 
